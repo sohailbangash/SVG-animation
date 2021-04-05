@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background: #eaeaea;
+}
+
+.color-head {
+    background-image: linear-gradient( to right, orange, #fe3e00, #922b3e, purple, #1c1aaf, #0066e7, #0a8062);
+    font-size: 2em;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#front-wheel,
+#back-wheel {
+    animation: wheel 0.9s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#man-bike {
+    animation: man-bike 1s ease-in-out infinite alternate;
+    transform-origin: bottom;
+}
+
+#hat {
+    animation: hat 1s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+
+/* #hat {} */
+
+@keyframes wheel {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes man-bike {
+    from {
+        transform: rotateX(0deg);
+    }
+    to {
+        transform: rotateX(20deg);
+    }
+}
+
+@keyframes hat {
+    from {
+        transform: translateY(0%) rotateZ(0deg);
+    }
+    to {
+        transform: translateY(40%) rotateZ(20deg);
+    }
+}
